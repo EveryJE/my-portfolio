@@ -43,7 +43,6 @@ function App() {
 
   return (
     <div className="App">
-
     <MenuButon openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <TopBar openMenu={openMenu} setOpenMenu={setOpenMenu} />
       <Menu openMenu={openMenu} setOpenMenu={setOpenMenu} currentSection={currentSection} setCurrentSection={setCurrentSection}/>

@@ -59,8 +59,11 @@ export const mobileAppList = [
     appStoreUrl: "",
   },
   {
-    title: "mobileApps2",
-    ImgUrl: "docs/down.png",
+    title: "focusTimer",
+    ImgUrl: "docs/apps/euclideancalc.png",
+    expoUrl: "",
+    gitHubUrl: "",
+    appStoreUrl: "",
   },
   {
     title: "modileApp3",
