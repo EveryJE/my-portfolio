@@ -13,7 +13,7 @@ export const TopBar = ({ openMenu, setOpenMenu }) => {
               <div className="itemContainer">
                 <FaUser className="icon" />
                 <a href="tel:+233501933699">
-                  <span>+233 509 897 757</span>
+                  <span>+233 501 933 699</span>
                 </a>
               </div>
               <div className="itemContainer">

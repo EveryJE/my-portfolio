@@ -37,9 +37,9 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  useEffect(() => {
-    console.log("selected current section : " + currentSection );
-  }, [currentSection]);
+  // useEffect(() => {
+  //   console.log("selected current section : " + currentSection );
+  // }, [currentSection]);
 
   return (
     <div className="App">
