@@ -1,0 +1,50 @@
+@import "../../globall.scss";
+
+.menu {
+  color: white;
+  position: fixed;
+  top: 75px;
+  left: calc(100vw - 8rem);
+
+  @include mobile{
+    left: calc(100vw - 7.75rem);
+
+  }
+  width: 0;
+  // height:100vh;
+  z-index: 2;
+  text-align: center;
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease;
+
+  .container {
+    height: fit-content;
+    // border: solid $lightBlue 5px;
+    background: transparent;
+    border-radius: 0rem 0rem 1rem 1rem;
+  }
+
+  &.active {
+    width: 7.5rem;
+  }
+  ul {
+   
+    display: grid;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    // font-size: 1.4rem;
+    // background: green;
+    //  gap: 1rem;
+    // padding-bottom: 0.5em;
+
+    .selected {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+}

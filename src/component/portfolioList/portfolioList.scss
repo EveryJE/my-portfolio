@@ -1,0 +1,64 @@
+
+@import '../../globall.scss';
+
+.portfolioList{
+  color: $plainColor;
+
+  @include mobile{
+      background-color: rgba($color: #000000, $alpha: 0.1);
+
+  }
+
+&:nth-child(n){
+    border-radius:1rem 1rem 0 0;
+    font-size: 1.2rem;
+    padding: .2rem;
+    min-width: 6rem;
+    text-align: center;
+    cursor: pointer;
+    margin: 0;
+    border-top: 0;
+    border-bottom: solid $lightBlue 2px;
+    overflow: visible;
+    text-decoration: none;
+    list-style: none;
+    font-weight: bolder;
+
+    
+
+    &:nth-last-child(n){
+        margin-left: 0;
+        flex-wrap: unset;
+    }
+
+    @include mobile{
+      padding: 0;
+      font-size:1.005rem;
+      flex: auto;
+
+      padding: 5px;
+      min-width: auto;
+    }
+    
+    &:hover{
+      font-weight: bolder;
+      color: #d0e7f5cc;
+
+    }
+    &.active{
+      margin-bottom: 2px;
+      background-color: $darkColor;
+      color: #edf3f7cc;
+      border-top: solid $lightBlue 3px;
+      border-bottom: 0px;
+      border-right: solid $lightBlue 2px;
+      border-left: solid $lightBlue 2px;
+
+    }
+      }
+      .bg{
+        background: $darkOrange;
+      }
+
+
+}

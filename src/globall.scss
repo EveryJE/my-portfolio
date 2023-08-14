@@ -1,0 +1,35 @@
+$mainColor:#15023a;
+$primaryColor:#f57b17;
+$secondaryColor:rgb(194,177,223);
+
+$darkColor:#000;
+$faintMainColor:rgba(21, 2, 58, 0.671);
+
+
+//my colors 
+$darkColor:#0d0225;
+$darkOrange:#452020;
+$darkViolet:#432093;
+$plainColor:#ffffff;
+$lightBlue:#00A5E2;
+
+
+
+
+
+
+$width:750px;
+$bigwidth:1050px;
+
+@mixin mobile{
+    @media(width <$width){
+        @content
+    }
+}
+
+
+@mixin bigscreens{
+    @media(width <$bigwidth){
+        @content
+    }
+}

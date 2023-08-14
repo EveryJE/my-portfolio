@@ -1,0 +1,47 @@
+@import "../../globall.scss";
+
+.menuList {
+  display: flex;
+//   background: $lightBlue;
+  overflow: visible;
+
+  li {
+    font-weight: 500;
+    width: 100%;
+    background-color: $lightBlue;
+    padding-bottom: 5px;
+    padding-top:5px ;
+    font-size: 1.3rem;
+
+    a {
+      color: $plainColor;
+      text-decoration: none;
+      font-size: inherit;
+      font-weight: 600;
+    }
+
+    &:hover {
+      opacity:0.8
+    }
+  }
+
+  &.selected {
+    li {
+        border-radius: 10px 0px 0px 10px;
+     a{
+        color: $plainColor;
+        width: 100%;
+     }
+             background: $darkColor;
+      width: calc(100% - 5px);
+    }
+
+    span {
+      width: 10px;
+
+      height: calc(100%);
+    //   background-color: white;
+      border-radius: 0px 10px 10px 0px;
+    }
+  }
+}

@@ -1,3 +1,28 @@
+@import './globall.scss';
 .app{
   height: 100vh;
+  background-color: inherit;
+
   }
+.section{
+  width: 100%;
+  height: calc(100vh - 70px);
+  position: absolute;
+  top: 70px;
+  scroll-snap-type: y mandatory;
+    scroll-behavior:smooth;
+  scrollbar-width: none;
+  background-color: $secondaryColor;
+
+  &::-webkit-scrollbar{
+    display: none;
+  }
+
+  >*{
+    // scroll-behavior:smooth;
+    width: 100vw;
+    height: calc(100vh - 70px);
+    scroll-snap-align: start;
+  }
+
+}

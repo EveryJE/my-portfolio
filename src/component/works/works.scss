@@ -1,0 +1,85 @@
+@import "../../globall.scss";
+.works {
+background-color:$darkColor;
+    display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .leftArrow {
+    position: absolute;
+    left: 1%;
+    width: 100px;
+
+    img {
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+
+  .rightArrow {
+    width: 100px;
+    position: absolute;
+    right: 1%;
+    transform: rotateY(180deg);
+
+    img {
+      cursor: pointer;
+      width: 100%;
+    }
+  }
+  .faint{
+    opacity: 0.1;
+  }
+
+  .slider {
+    height: 330px;
+    display: flex;
+    left: 0vw;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+
+    .outerContainer {
+      width: 100vw;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .innerContainer {
+        width: 700px;
+        height: 95%;
+        border-radius: 2rem 0 2rem 0;
+        border: solid 1px $mainColor;
+        display: flex;
+
+        @include mobile{
+          
+          width: 90%;
+        }
+
+        .left {
+          flex: 4;
+          background:#ffffff ;
+        }
+        .right {
+          height: 100%;
+       
+          flex: 6;
+          width: 100%;
+
+          .imageContainer {
+            height: 100%;
+            overflow: hidden;
+            transform: translateX(-30px);
+            img {
+              height: 100%;
+              transform: rotateZ(-30deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}

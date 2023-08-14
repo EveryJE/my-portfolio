@@ -1,0 +1,165 @@
+@import "../../globall.scss";
+
+.portfolio {
+  background: linear-gradient(
+    to bottom,
+    rgb(136, 114, 177) 10%,
+    rgb(255, 255, 255, 1) 100%
+  );
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+
+  @include mobile {
+    gap: 0.5rem;
+  }
+  h1 {
+    font-size: 4rem;
+    min-height: 4.5rem;
+
+    font-size: 48px;
+    font-weight: bold;
+    background: linear-gradient(45deg, $primaryColor, $mainColor);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Montserrat", sans-serif;
+
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .features {
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    background-color: $secondaryColor;
+    min-height: 2.5rem;
+    padding: 0;
+    ul {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+
+      @include mobile {
+        justify-content: space-around;
+      }
+    }
+  }
+
+  .featuresContainer {
+    z-index: 1;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    // @include mobile{
+    //   flex: 2;
+    // }
+    // background-color: antiquewhite;
+    .item {
+      width: 220px;
+      height: 150px;
+      border: 1px solid $mainColor;
+      border-radius: 1rem;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: rgba(2, 83, 94, 0.3);
+
+      @include mobile {
+        width: 300px;
+        height: 180px;
+      }
+
+      .icons {
+        position: absolute;
+        font-size: 2rem;
+        display: flex;
+        transition: all 0.3s ease;
+        padding: 5px;
+        gap: 20px;
+        opacity: 0.05;
+        transform: translateY(30px);
+
+        .github-icon {
+          background-color: #24292e; /* Fallback color for non-gradient browsers */
+          color: white;
+          padding: 10px;
+          border-radius: 50%;
+        }
+
+        .playstore-icon {
+          background: linear-gradient(45deg, #fc4a1a, #f7b733);
+          padding: 10px;
+          border-radius: 50%;
+          display: inline-block;
+          color: white;
+        }
+        .appstore-icon {
+          background: linear-gradient(45deg, #0070c9, #00a4ef);
+          padding: 10px;
+          border-radius: 50%;
+          display: inline-block;
+        }
+        .internet-icon {
+          background: linear-gradient(to bottom, #007bff, #00bcd4);
+          color: white;
+          padding: 10px;
+          border-radius: 50%;
+        }
+        .icon:hover {
+          box-shadow: 1px 1px 1px 1px rgb(29, 21, 43);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        background: $faintMainColor;
+        transition: all 1s ease;
+      }
+
+      &:hover {
+        .icons {
+          opacity: 1;
+          z-index: 2;
+          transform: translateY(0px);
+        }
+        img {
+          opacity: 0.15;
+        }
+      }
+      @include mobile {
+        // &:focus{
+        //   h3 {
+        //     opacity: 1;
+        //   }
+        //   img {
+        //     opacity: 0.2;
+        //   }
+        // }
+      }
+    }
+  }
+
+  .background {
+    position: absolute;
+    display: fixed;
+    height: 100%;
+    background-position: right;
+    z-index: 0;
+    opacity: 0.25;
+  }
+}

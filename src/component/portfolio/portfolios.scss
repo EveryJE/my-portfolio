@@ -1,0 +1,142 @@
+@import "../../globall.scss";
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  background: $darkColor;
+
+  @include mobile {
+    gap: 0.5rem;
+  }
+  h1 {
+    font-size: 48px;
+    color: $lightBlue;
+    overflow: visible;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
+    // z-index: 2;
+  }
+  .features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    width: fit-content;
+    // padding: 2px;
+    padding-left: 20px;
+    overflow: visible;
+
+    ul {
+    //   background: $darkOrange;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      flex: 1;
+      overflow: visible;
+
+      @include mobile {
+        justify-content: space-around;
+      }
+    }
+  }
+  .featuresContainer {
+    width: 80%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .item {
+      width: 250px;
+      height: 200px;
+      border: 0 solid $lightBlue;
+      border-bottom: 5px;
+      border-radius: 1rem;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: $plainColor;
+
+      .icons {
+        position: absolute;
+        font-size: 2rem;
+        display: flex;
+        transition: all 0.4s ease;
+        padding: 5px;
+        gap: 20px;
+        opacity: 0.05;
+        transform: translateY(30px);
+      }
+      .internet-icon {
+        background: linear-gradient(to bottom, #007bff, #00bcd4);
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+      }
+      .github-icon {
+        background-color: #24292e; /* Fallback color for non-gradient browsers */
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+      }
+      .playstore-icon {
+        background: linear-gradient(45deg, #fc4a1a, #f7b733);
+        padding: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        color: white;
+      }
+      .appstore-icon {
+        background: linear-gradient(45deg, #0070c9, #00a4ef);
+        padding: 10px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .item-background {
+        position: absolute;
+        display: flex;
+        flex: 1;
+        width: 100%;
+        height: 100%;
+        transform: translateY(-190px);
+        background: $lightBlue;
+        transition: all 0.4s ease;
+        z-index: 1;
+        opacity: 1;
+      }
+      img {
+        display: flex;
+        flex: 1;
+        z-index: 0;
+        width: 100%;
+        height: 100%;
+        // background: $faintMainColor;
+        transition: all 1s ease;
+      }
+      &:hover {
+        .icons {
+          opacity: 1;
+          z-index: 2;
+          transform: translateY(0px);
+          .icon:hover {
+            box-shadow: 1px 1px 1px 1px rgb(29, 21, 43);
+          }
+        }
+        .item-background {
+          transform: translateY(0);
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
