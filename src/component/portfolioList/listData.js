@@ -60,7 +60,7 @@ export const mobileAppList = [
   },
   {
     title: "eucledian Algoriyth",
-    ImgUrl: "docs/apps/euclideancalc.PNG",
+    ImgUrl: "docs/apps/euclideancalc.png",
     expoUrl: "",
     gitHubUrl: "",
     appStoreUrl: "",
