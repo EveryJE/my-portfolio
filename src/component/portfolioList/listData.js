@@ -59,8 +59,8 @@ export const mobileAppList = [
     appStoreUrl: "",
   },
   {
-    title: "focusTimer",
-    ImgUrl: "docs/apps/euclideancalc.png",
+    title: "eucledian Algoriyth",
+    ImgUrl: "docs/apps/euclideancalc.PNG",
     expoUrl: "",
     gitHubUrl: "",
     appStoreUrl: "",
