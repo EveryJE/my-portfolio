@@ -24,7 +24,7 @@ import {
 
 
 export const Portfolio = ({section}) => {
-  const [selectedItem, setSelectedItem] = useState(0);
+  const [selectedItem, setSelectedItem] = useState(2);
   const [selectedData, setSelectedData] = useState([]);
 
   useEffect(() => {
